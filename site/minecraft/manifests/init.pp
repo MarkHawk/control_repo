@@ -15,9 +15,10 @@ pakage {'java':
     }
     file {'/etc/systemd/system/minecraft.service',
       ensure => file,
-      source => 'puppet:///modules/minecraft/minecraft.service',
+      source => 'puppet:///modules/minecraft/minecraft.service':,
       }
       service {'minecraft':
 	ensure => running,
 	enable => true,
    }
+}
